@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="https://fonts.googleapis.com/css2?family=Kufam&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/mathjs/3.3.0/math.min.js></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <div id="container">
+      <div class="row">
+        <input type="number" id="numDisplay" value="0" readonly/>
+      </div>
+      <div class="row">
+        <button class="calc-btn" id="calc-clear">AC</button>
+        <button class="calc-btn" id="calc-bcsp">&Leftarrow;</button>
+        <button class="calc-btn calc-operator" id="calc-div">&divide;</button>
+      </div>
+      <div class="row">
+        <button class="calc-btn calc-num" id="calc-seven">7</button>
+        <button class="calc-btn calc-num" id="calc-eight">8</button>
+        <button class="calc-btn calc-num" id="calc-nine">9</button>
+        <button class="calc-btn calc-operator" id="calc-multi">&Cross;</button>
+      </div>
+      <div class="row">
+        <button class="calc-btn calc-num" id="calc-four">4</button>
+        <button class="calc-btn calc-num" id="calc-five">5</button>
+        <button class="calc-btn calc-num" id="calc-six">6</button>
+        <button class="calc-btn calc-operator" id="calc-minus">-</button>
+      </div>
+      <div class="row">
+        <button class="calc-btn calc-num" id="calc-one">1</button>
+        <button class="calc-btn calc-num" id="calc-two">2</button>
+        <button class="calc-btn calc-num" id="calc-three">3</button>
+        <button class="calc-btn calc-operator" id="calc-plus">+</button>
+      </div>
+      <div class="row">
+        <button class="calc-btn calc-num" id="calc-zero">0</button>
+        <button class="calc-btn" id="calc-decimal">.</button>
+        <button class="calc-btn calc-operator" id="calc-equals">=</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

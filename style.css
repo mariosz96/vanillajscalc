@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+  font-family: "Kufam", sans-serif;
+}
+
+/* Styling for removing number wheel next to number input */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 3px;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+/* End of number wheel styling */
+
+body {
+  /* background: linear-gradient(to bottom, black, white); */
+  position: relative;
+  top: 0;
+  left: 0;
+  border-top: 1px solid transparent;
+  z-index: -1;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(46, 46, 46),
+    rgb(85, 85, 85)
+  );
+  margin: 0;
+}
+
+input,
+button {
+  border: none;
+}
+
+#container {
+  border-radius: 25px 25px 15px 15px;
+  margin: 0 auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: -1px 4px 11px 2px rgba(0, 0, 0, 0.58);
+}
+
+#numDisplay {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  direction: rtl;
+  font-size: 54px;
+  text-indent: 15px;
+  padding-bottom: 25px;
+  line-height: 2.5em;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  background-color: rgb(224, 224, 224);
+}
+
+#calc-zero {
+  border-bottom-left-radius: 10px;
+}
+
+#calc-equals {
+  border-bottom-right-radius: 10px;
+}
+
+#numDisplay:focus,
+.calc-btn:focus {
+  outline: none;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-auto-rows: minmax(100px, auto);
+}
+
+.calc-btn {
+  font-size: 26px;
+  background-color: rgb(209, 209, 209);
+}
+
+#calc-clear,
+#calc-zero {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+#calc-clear,
+#calc-bcsp {
+  background-color: rgb(190, 190, 190);
+}
+
+#calc-div,
+#calc-multi,
+#calc-minus,
+#calc-plus {
+  font-size: 28px;
+  color: whitesmoke;
+  background-color: rgb(81, 78, 224);
+}
+
+#calc-equals {
+  background-color: rgb(234, 255, 117);
+}
+
+#calc-decimal {
+  background-color: rgb(219, 219, 219);
+}
