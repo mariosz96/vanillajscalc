@@ -5,8 +5,11 @@ let backspace = document.getElementById("calc-bcsp");
 let displayNum = document.getElementById("numDisplay");
 let allButtons = document.getElementsByClassName("calc-btn");
 let decimal = document.getElementById("calc-decimal");
+let hDisplay = document.getElementById("historyDisplay");
+let historyValue = document.getElementById("calc-history");
 
 let valDisplay = "0";
+let history = "0";
 let store = "";
 let evalArray = [];
 let lastButtonPressedWasEquals = false;
@@ -36,6 +39,11 @@ function updateDisplay(e) {
   }
 
   valDisplay += btnText;
+
+  if (valDisplay.length > 9) {
+    valDisplay = valDisplay.slice(0, 10);
+  }
+
   displayNum.value = valDisplay;
 }
 
@@ -45,9 +53,11 @@ function performOperation(e) {
   switch (operator) {
     case "+":
       store = valDisplay;
+      evalArray.push(store, "+");
+      history = evalArray.join(" ");
+      hDisplay.value = history;
       valDisplay = "0";
       displayNum.value = valDisplay;
-      evalArray.push(store, "+");
       break;
 
     case "-":
@@ -74,7 +84,9 @@ function performOperation(e) {
     case "=":
       evalArray.push(valDisplay);
       valDisplay = calculation(evalArray);
+      // historyValue.innerText = `${evalArray.join(" ")} = ${valDisplay}`;
       displayNum.value = valDisplay;
+      hDisplay.value = displayNum.value;
       evalArray = [];
       lastButtonPressedWasEquals = true;
       break;
@@ -94,6 +106,7 @@ clrBtn.addEventListener("click", () => {
   store = "0";
   evalArray = [];
   displayNum.value = "0";
+  hDisplay.value = "0";
 });
 
 backspace.addEventListener("click", () => {
