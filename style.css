@@ -76,17 +76,6 @@ button {
   background-color: rgb(224, 224, 224);
 }
 
-/* #calc-history {
-  border-radius: 25px 25px 15px 15px;
-  position: fixed;
-  top: 50%;
-  left: 70%;
-  transform: translate(-50%, -50%);
-  border: 3px solid red;
-  width: 300px;
-  height: 700px;
-} */
-
 #calc-zero {
   border-bottom-left-radius: 10px;
 }
@@ -103,7 +92,7 @@ button {
 
 .row {
   display: grid;
-  grid-template-columns: repeat(4, 100px);
+  grid-template-columns: repeat(4, 155px);
   grid-auto-rows: minmax(100px, auto);
 }
 

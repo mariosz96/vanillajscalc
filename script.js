@@ -62,23 +62,29 @@ function performOperation(e) {
 
     case "-":
       store = valDisplay;
+      evalArray.push(store, "-");
+      history = evalArray.join(" ");
+      hDisplay.value = history;
       valDisplay = "0";
       displayNum.value = valDisplay;
-      evalArray.push(store, "-");
       break;
 
     case "⨯":
       store = valDisplay;
+      evalArray.push(store, "*");
+      history = evalArray.join(" ");
+      hDisplay.value = history;
       valDisplay = "0";
       displayNum.value = valDisplay;
-      evalArray.push(store, "*");
       break;
 
     case "÷":
       store = valDisplay;
+      evalArray.push(store, "/");
+      history = evalArray.join(" ");
+      hDisplay.value = history;
       valDisplay = "0";
       displayNum.value = valDisplay;
-      evalArray.push(store, "/");
       break;
 
     case "=":
